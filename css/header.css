@@ -6,14 +6,17 @@ header {
     background-color: var(--bg-ter-color);
     padding: 38px 48px;
 
-    nav {
-        display: none;
+    .nav-menu {
+        margin-top: 24px;
+
+        input[type="checkbox"]:checked ~ nav {
+            display: block;
+        }
+
+        nav {
+            display: none;
+        }
     }
-}
-
-.nav-menu {
-    margin-top: 24px;
-
 }
 
 .logo {
