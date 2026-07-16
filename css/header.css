@@ -1,0 +1,125 @@
+.main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding: 38px 40px;
+    background-color: var(--bg-ter-color);
+
+    .nav-menu {
+        margin-top: 16px;
+
+        .menu-list {
+            list-style: none;
+            
+            li {
+                margin: 16px 16px;
+
+                a {
+                    text-decoration: none;
+                    font-size: 20px;
+                    font-weight: var(--menu-txt-weight);
+                    color: var(--txt-sec-color);
+
+                    &.active {
+                        text-decoration: underline;
+                    }
+                }                
+            }            
+        }
+
+        input[type="checkbox"]:checked ~ nav {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0px;
+            width: 100%;
+            background-color: var(--bg-ter-color);
+        }
+
+        nav {
+            display: none;
+        }
+    }
+}
+
+.logo {
+    display: inline-block;
+    width: 64px;
+    height: 60px;
+
+    .logo-mobile {
+        display: block;
+    }
+
+    .logo-desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-menu {
+        margin-top: 0;
+        width: 467px;
+
+        label {
+            display: none;
+        }
+
+        nav {
+            display: block !important;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+
+                li {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .main-header {
+        padding: 38px 120px;
+
+        .logo {
+            width: 256px;
+            height: 60px;
+
+            .logo-mobile {
+                display: none;
+            }
+
+            .logo-desktop {
+                display: block;
+            }
+        }
+
+        .nav-menu {
+            nav {
+                ul {
+                    li {
+                        a {
+                            &:hover {
+                                color: var(--pri-color);
+                            }
+                        }
+                    }
+                }
+            }            
+        }
+    }    
+}
+
+@media screen and (min-width: 1920px) {
+    .main-header {
+        padding: 38px 160px;
+    }
+}
