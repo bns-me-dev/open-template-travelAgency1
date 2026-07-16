@@ -12,13 +12,22 @@
 }
 
 :root {
+    --pri-color: #8F0101;
+    --sec-color: #B81515;
+
     --bg-pri-color: #ffffff;
     --bg-sec-color: #f5f5f5;
     --bg-ter-color: #000000;
 
-    --btn-pri-color: #8F0101;
-    --btn-sec-color: #B81515;
-
     --txt-pri-color: #222222;
     --txt-sec-color: #ffffff;
+
+    --title-weight: 700;
+    --txt-weight: 400;
+    --menu-txt-weight: 500;
+}
+
+body {
+    font-family: "Montserrat";
+    color: var(--txt-pri-color);
 }
